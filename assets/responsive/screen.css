@@ -1,0 +1,180 @@
+/* ============== PARTIE RESPONSIVE ================= */
+
+
+
+/* ============== POUR TABLETTE ================= */
+
+@media screen 
+and (max-width: 992px){
+
+    header{
+        padding: 0;
+    }
+
+    .toggle{
+        display: block;
+        position: relative;
+        align-items: center;
+        display: flex;
+    }
+     
+    .toggle span{
+        position: relative;
+        width: 20px;
+        height: 50px;
+        
+    }
+    
+    .toggle span::before{
+        content: '';
+        position: absolute;
+        top: 20px;
+        width: 120%;
+        height: 3px;
+        background: #7db35c;
+        transition: 0.5s;
+    }
+    
+    .toggle span::after{
+        content: '';
+        position: absolute;
+        bottom: 20px;
+        width: 120%;
+        height: 3px;
+        background: #7db35c;
+        transition: 0.5s;
+        
+    }
+    
+    .toggle.active span::before{
+        transform: rotate(225deg);
+        top: 24px;
+    }
+    
+    .toggle.toggle.active span::after{
+        transform: rotate(135deg);
+        bottom: 23px;
+    }
+
+    .menu{
+        position: absolute;
+        list-style-type: none;
+        display: flex;
+        flex-direction: column;
+        top: 100%;
+        width: 250px;
+        height: 100vh;
+        right: -250px;
+        background: #7db35c;
+        visibility: hidden;
+        text-align: center;
+        border-top-left-radius: 15px;
+        transition: 0.4s;
+        -webkit-transition: 0.4s;
+        -moz-transition: 0.4s;
+        -ms-transition: 0.4s;
+        -o-transition: 0.4s;
+    }
+
+    nav .menu a{
+        color: #fff;
+    }
+
+
+
+    nav.active .menu {
+        visibility: visible;
+        opacity: 1;
+        right: 0;
+    }
+
+
+    .droite .cercle{
+        
+        right: 0rem;
+        top: -6rem;
+    }
+
+
+
+    .descriptionOne {
+        grid-template-columns: 1fr;
+      }
+
+      .about_two .container{
+        grid-template-columns: 1fr;
+      }
+
+      .about_two .container .container_one{
+        grid-template-rows: 1fr;
+        place-content: center;
+      
+      }
+
+      .about_one div{
+        text-align: center;
+        display: grid;
+        place-content: center;
+        padding: 0;
+      }
+
+
+    
+ 
+      .about_sous {
+        grid-template-columns: 1fr;
+      }
+
+      .about_image img {
+        height: 270px;
+        width: 100%;
+      }
+
+      .about_sous {
+        margin: 20px;
+        box-shadow: 0 0 4px #0000003b;
+      }
+
+      
+
+
+    /* =========== ABOUT HOME MESSAGE ================ */
+
+
+    
+
+
+}
+
+@media screen 
+and (max-width: 767px){
+
+    .about_image img {
+        height: 200px;
+        width: 100%;
+      }
+
+      .inner_one h1{
+        font-size: 20px;
+      }
+
+      footer .inner_three{
+        font-size: 10px;
+        bottom: 0;
+        position: absolute;
+      }
+}
+
+
+/* ============== POUR SMARTPHONE ================= */
+
+@media screen 
+and (max-width: 575px){
+    .slide-3 .slide-content{
+        grid-template-columns: 1fr;
+    }
+
+    .inner_one h1{
+        font-size: 15px;
+      }
+}
